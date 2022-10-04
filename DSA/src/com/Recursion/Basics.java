@@ -2,6 +2,7 @@ package com.Recursion;
 
 
 public class Basics {
+
     public static void printIncrease(int N) {
         if (N == 0) {
             return;
@@ -32,7 +33,6 @@ public class Basics {
         } else {
             return false;
         }
-
     }
 
     //Ass: Given N, the function will return the sum of digit
@@ -59,6 +59,38 @@ public class Basics {
        return pow;
     }
 
+    public static int fpPow(int a, int N) {
+        //base condition
+        if(N == 0){
+            return 1;
+        }
+        int pow = fpPow(a, N/2); // a^N/2
+        //main logic - calculate pow
+        if(N%2 == 0) { //even
+            //return fpPow(a, N/2) * fpPow(a, N/2);
+            return (pow*pow);
+        } else {
+            //return fpPow(a, N/2) * fpPow(a, N/2) * a;
+            return (pow*pow*a);
+        }
+    }
+
+    public static int powMod(int a, int N, int m) {
+
+        if(N == 0) {
+            return 1;
+        }
+
+        long pow = powMod(a, N/2, m);
+
+        if(N%2 == 0) {
+            return ((int)(pow * pow) % m);
+        } else {
+            return  (int)(((pow * pow) % m * a) %m);
+        }
+
+    }
+
     public static void main(String[] args) {
         // char[] ch = {'g', 'o', 'o', 'd', 'd', 'a', 'd' };
         // if (isPallindrome(ch, 5, 6)) {
@@ -66,9 +98,8 @@ public class Basics {
         // } else {
         //     System.out.println("Not Pallindrome");
         // }
-
        //System.out.println(sumDigit(12345));
-       System.out.println(pow(3,4));
-
+       //System.out.println(pow(3,4));
+       System.out.println(fpPow(2,5));
     }    
 }
