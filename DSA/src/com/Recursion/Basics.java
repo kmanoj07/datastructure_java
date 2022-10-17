@@ -75,12 +75,12 @@ public class Basics {
         }
     }
 
+    //If inside the question it is given to take the modulous
+    //Fast exponentition  --> Reason Time compexity O(long2N) (log N base 2)
     public static int powMod(int a, int N, int m) {
-
         if(N == 0) {
             return 1;
         }
-
         long pow = powMod(a, N/2, m);
 
         if(N%2 == 0) {
@@ -88,7 +88,6 @@ public class Basics {
         } else {
             return  (int)(((pow * pow) % m * a) %m);
         }
-
     }
 
     public static void main(String[] args) {

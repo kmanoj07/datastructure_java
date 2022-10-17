@@ -47,7 +47,6 @@ public class Shaggy {
         HashMap<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < n - 1; i++) {
             if (!map.containsKey(A.get(i))) {
-
                 map.put(A.get(i), i);
             } else {
                 int j = map.get(A.get(i));
@@ -61,7 +60,7 @@ public class Shaggy {
 
     public static void main(String[] args) {
         ArrayList<Integer> A = new ArrayList<Integer>() {
-            {
+            { 
                 add(7);
                 add(1);
                 add(3);

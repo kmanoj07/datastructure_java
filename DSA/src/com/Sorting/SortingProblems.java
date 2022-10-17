@@ -1,8 +1,6 @@
 package com.Sorting;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.Arrays;;
 
 public class SortingProblems {
     public static int solve(int[] A) {
