@@ -56,7 +56,7 @@ public class SortingBasics {
         val.forEach((data) -> {
             list.add(data);
         });
-        Collections.sort(list, new  CustomCampare());
+        Collections.sort(list, new CustomCampare());
         for (int i = 0; i < A.length; i++) {
             A[i] = list.get(i);
         }
