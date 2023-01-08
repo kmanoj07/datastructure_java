@@ -24,7 +24,7 @@ class CustomCampare implements Comparator<Integer> {
                 cnt2 = cnt2 + 1;
             }
         }
-        // comaparision
+        // comparision
         if (cnt1 == cnt2) {
             return 0;
         } else if (cnt1 > cnt2) {
@@ -417,5 +417,6 @@ public class SortingBasics {
         int[] A = { 12, 9, 13, 1, 6 };
         sortingFactor(A);
         printArray(A, 0, A.length - 1);
+
     }
 }
